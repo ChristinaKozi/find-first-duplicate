@@ -6,7 +6,7 @@ func find_first_duplicate(arr []int) int {
 	checked := []int{}
 	for i := 0; i < len(arr); i++ {
 		for _, val := range checked {
-			if arr[i] == val {
+			if val == arr[i] {
 				return arr[i]
 			}
 		}
@@ -17,5 +17,5 @@ func find_first_duplicate(arr []int) int {
 }
 
 func main() {
-	fmt.Println(find_first_duplicate([]int{1, 2, 3, 0}))
+	fmt.Println(find_first_duplicate([]int{1, 2, 3, 3, 0}))
 }
